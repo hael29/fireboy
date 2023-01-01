@@ -8,3 +8,5 @@ V levelu můžou být různé kapaliny - láva, voda a jed. Lávou může Ohýne
 Cílem levelu tedy je dostat oba hrdiny k jejich východu.
 
 Ve složce se také nachází soubor 'delani_levelu.py'. Tento soubor lze spustit a využít na vlastní grafické dělání levelu. Po spuštění se vás program zeptá, který soubor otevřít. Zadáte například 'level_1.txt'. Otevře se okno kde lze měnit první level. Pomocí různých tlačítek se zakreslují různé věci, pomocí klávesy N se maže. Konkrétní klávesy a jejich využití vám program vypíše do terminálu hned po spuštění. Nový level uložíte tak, že program zavřete pomocí křížku v rohu. 'level_1.txt' se tedy aktualizoval a po novém spuštění hlavního souboru bude první level jiný.
+
+EDIT: Zjistili jsme, že je nutné si složku fireboy někam uložit/přesunout. Program nebude fungovat, necháte-li ho v zazipované složce, do které jste se dostali dvojitým kliknutím.
