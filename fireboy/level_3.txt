@@ -1,35 +1,35 @@
-   WWWWW                                          
-WWWW   WWWWWW                                     
-W           WWW         WWWWWWWWW                 
-W             WWW       W     WWWW                
-WW              WW      W     W WWW               
- WW              WW     WWWWWWWWWWW               
-  WW              WW  WWWW    WWWW                
-   WWW             WWWW WW    WWWW                
-     WW      WW     WW   WW  WWWWW                
-       WW     WWWWWWWWWWWWW WWW WWW               
-         WW WWWWWWWWW      WWWWWW WW              
-          WWW    WWWWW     WWWWW   WW             
-         WW WWWWWWWWWW    W WWWW    WW            
-        WW   WWWWWWWWWWW WW          WW           
-        WW WWW  WWWWWW WW     W       W           
-         WWW    WWWW            WW    WW          
-       WWWWWW                          W          
-     WWW             WWWWW                        
-   WWW       WWWWWWW                              
-  WW                                              
-WW                                                
-W                           W                     
-WWWWWWWWW                                         
-                W                     WW          
-                                                  
-               W            WWW                   
-               W    WWW                           
-                   WWWW WWWW                      
-                            WW                    
-                W       W WWW                     
-                WW      WWW                       
-                 WWWWWWWW                         
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
+X                                      X          
+X                        WW WW         X          
+X                       W  W  W        X          
+X           FF FF       W     W        X          
+X          F  F  F       W   W         X          
+X          F     F        W W          X          
+X B         F   F          W         G X          
+X            F F                       X          
+XXXX          F                     XXXX          
+XXXXW  X                        X  FXXXX          
+XXXXWW                            FFXXXX          
+XXXXWWW                          FFXXXXX          
+XXXXXWWW  X                  X  FFXXXXXX          
+XXXXXXWWW                      FFXXXXXXX          
+XXXXXXXWWW                    FFXXXXXXXX          
+XXXXXXXXWWW  X            X  FFXXXXXXXXX          
+XXWWXWWXXWWW                FFXXFFXFFXXX          
+XXWWXWWXXXWWW              FFXXXFFXFFXXX          
+XXXXXXXXXXXWWW  X      X  FFXXXXXXXXXXXX          
+XXWXXXWXXXXXWWW          FFXXXXXFFFFFXXX          
+XXWWWWWXXXXXXWWW        FFXXXXXXFXXXFXXX          
+XXXXXXXXXXXXXXWWW      FFXXXXXXXXXXXXXXX          
+XXXXXXXXXXXXXXXWW f  w FFXXXXXXXXXXXXXXX          
+XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
+XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
+XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
+XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
+WWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFF          
+WWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFF          
+WWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFF          
+WWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFF          
                                                   
                                                   
                                                   
