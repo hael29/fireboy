@@ -1,3 +1,4 @@
+#import knihoven a funkcí z ostatních souborů
 import pygame as p
 import math as m
 from levels import levels_menu
@@ -36,7 +37,7 @@ def triangle_collision(point, triangle):
     return area_total-5 < (area_1 + area_2 + area_3) < area_total+5
 
 
-
+#třída Cihla
 class Brick:
     size = 25
     def __init__(self, width, pos, typ):
@@ -44,18 +45,12 @@ class Brick:
         self.pos = pos
         self.type = typ
 
-    
-
     def real_pos(self):
         return (self.pos[0]*self.size, self.pos[1]*self.size)
 
-    
-
 
 class Map:
-    #nacte mapu z text souboru, prozatim X je cihla a zbytek je prazdno, ale pozdeji bude vice veci(jed, ohen, voda, zrcadla, pohyblive cihly, dvere)
-    #vrati pole cihel
-    
+    #načte mapu z text souboru, vrátí pole cihel
     def __init__(self, name):
         with open(name, "r") as f:
             map_array = []
@@ -81,7 +76,7 @@ class Map:
                 map_array.append(row)
                 line_num += 1
         self.array = map_array
-        
+    #nakreslí mapu
     def draw_map(self):
         color_dict = {"poison":"green", "fire":"red", "water":"blue", "brick":"grey", "brick_left":"grey", "brick_right":"grey", \
                       "f_spawn":(250, 100, 100), "w_spawn":(100, 100, 250), "w_portal":(200, 200, 255), "f_portal":(255, 200, 200),\
@@ -112,7 +107,7 @@ class Map:
                         p.draw.polygon(screen, color_dict[prev_brick.type],\
                                    (brick.real_pos(), (brick.real_pos()[0], brick.real_pos()[1]+brick.size), (brick.real_pos()[0] + brick.size*brick.width, brick.real_pos()[1])))
                 index += 1
-    #vrati jestli je na dane souradnici cihla nebo ne, muzes to pouzit pri behani postav
+    #vrátí jestli je na dané souřadnici cihla nebo ne
     def brick_on_pos(self, pos):
         fake_pos = (pos[0]//25, pos[1]//25)
         index = 0
@@ -136,7 +131,7 @@ class Map:
                         return prev_brick
             index += 1
         return False
-
+#třída Hráčí
 class Players:
     def __init__(self, width, height, x, y, x_speed, floatnum, fallnum, img, jumping, bool, name):
         self.width = width
@@ -150,9 +145,8 @@ class Players:
         self.jumping = jumping
         self.bool = bool
         self.name = name
-
+    #pohyb hráče
     def move(self, dir):
-        
         point1 = mapa.brick_on_pos((self.x + self.width , self.y + self.height-10))
         point2 = mapa.brick_on_pos((self.x + self.width , self.y + self.height//2))
         point3 = mapa.brick_on_pos((self.x + self.width, self.y))
@@ -172,7 +166,8 @@ class Players:
                and (not point5 or point5.type in ("water", "fire", "poison"))\
                and (not point6 or point6.type in ("water", "fire", "poison")):
                 self.x -= self.x_speed
-    
+
+    #je hráč ve vzduchu?
     def inair(self):
         brick = mapa.brick_on_pos((self.x + self.width//2, (self.y + self.height)))
         if brick is False:
@@ -180,24 +175,21 @@ class Players:
         if brick.type in ("water", "poison", "fire"):
             return False
         return mapa.brick_on_pos((self.x + self.width//2, (self.y + self.height))) 
-    
+    #má hráč cihlu nad hlavou?
     def above(self):
         return mapa.brick_on_pos((self.x + self.width//2, self.y))
-    
+    #padání hráče
     def fall(self):
         if self.y < height - self.height:
             self.y += self.fallnum
         if self.fallnum < 10:
             self.fallnum += 1
-            
+    #skok nahoru (hráče)
     def float(self):
         self.y -= self.floatnum
         if self.floatnum > 0:
             self.floatnum -= 1
-'''
-to do list:
-idk
-'''
+#definice proměnných pro hru nezbytných
 mapa = Map("level_1.txt")
 
 for line in mapa.array:
@@ -211,7 +203,6 @@ for line in mapa.array:
         elif brick.type == "f_portal":
             f_portal = brick.real_pos()
 
-
 fireboy_img = p.image.load("fireboy.png")
 fireboy = Players(32, 45, f_spawn[0], f_spawn[1], 5, 14, 0, fireboy_img, False, False, "fireboy")
 fireboy_img = p.transform.scale(fireboy_img, (fireboy.width, fireboy.height))
@@ -220,9 +211,8 @@ watergirl_img = p.image.load("watergirl.png")
 watergirl = Players(30, 45, w_spawn[0], w_spawn[1], 5, 14, 0, watergirl_img, False, False, "watergirl")
 watergirl_img = p.transform.scale(watergirl_img, (watergirl.width, watergirl.height))
 
-#respawn_button = p.draw.rect(screen, "black", (265, 387, 480, 70), 1)
-#leave_button = p.draw.rect(screen, "black", (265, 477, 480, 70), 1)
 game =  True
+level = "level_1.txt"
 
 fireboy_left = p.transform.scale(p.image.load("fireboy left.png"), (fireboy.width, fireboy.height))
 fireboy_right = p.transform.scale(p.image.load("fireboy right.png"), (fireboy.width, fireboy.height))
@@ -231,14 +221,12 @@ watergirl_left = p.transform.scale(p.image.load("watergirl left.png"), (watergir
 watergirl_right = p.transform.scale(p.image.load("watergirl right.png"), (watergirl.width, watergirl.height))
 deathscreen = p.transform.scale(p.image.load("deathscreen.png"), (600, 400))
 
-#la musica
+#zvuky
 oof = p.mixer.Sound("roblox.wav")
 click = p.mixer.Sound("click.wav")
 click.set_volume(0.3)
 
-def game_won():
-    screen.fill("yellow")
-
+#pohyb doleva doprava
 def left_right(pressed, character):
     dic = {"fireboy":{"keys":(p.K_a, p.K_d),"imgs":(fireboy_img, fireboy_left, fireboy_right)}, "watergirl":{"keys":(p.K_LEFT, p.K_RIGHT), "imgs":(watergirl_img, watergirl_left, watergirl_right)}}
     if pressed[dic[character.name]["keys"][0]]: 
@@ -249,7 +237,7 @@ def left_right(pressed, character):
         character.img = dic[character.name]["imgs"][2]
     else: 
         character.img = dic[character.name]["imgs"][0]
-
+#pohyb nahoru dolu
 def up_down(pressed, character):
     dic = {"fireboy":p.K_w, "watergirl":p.K_UP}
     if pressed[dic[character.name]] and character.jumping is False and character.bool  is False:
@@ -273,25 +261,57 @@ def up_down(pressed, character):
         
     if character.above() is not False:
         character.floatnum = 0
-        
+def draw_pause():
+    pause_menu = p.draw.rect(screen, "gray", (925, 0, 75, 75))
+    p.draw.rect(screen, "brown", (925, 0, 75, 75), 5)
+    p.draw.line(screen, "black", (950, 15), (950, 60), 20)
+    p.draw.line(screen, "black", (975, 15), (975, 60), 20)
+    return pause_menu
+#zatemnění části obrazovky
+def darkmode():
+    size = 100
+    rect_array = []
+    if fireboy.y < watergirl.y:
+        rect = p.Rect((0,0), (width, fireboy.y-size))
+        rect2 = p.Rect((0, watergirl.y+size), (width, height-watergirl.y-size))
+    else:
+        rect = p.Rect((0,0), (width, watergirl.y-size))
+        rect2 = p.Rect((0, fireboy.y+size), (width, height-fireboy.y-size))
+    rect_array.append(rect)
+    rect_array.append(rect2)
+    if fireboy.x < watergirl.x:
+        rect = p.Rect((0,0), (fireboy.x-size, height))
+        rect2 = p.Rect((watergirl.x+size, 0), (width-watergirl.x-size, height))
+    else:
+        rect = p.Rect((0,0), (watergirl.x-size, height))
+        rect2 = p.Rect((fireboy.x+size,0), (width-fireboy.x-size, height))
+    rect_array.append(rect)
+    rect_array.append(rect2)
+    for rect in rect_array:
+        p.draw.rect(screen, "black", rect)
+
+#hlavní cyklus
 while True:
     p.display.update()
 
+    #vykreslování věcí na obrazovku
     screen.fill("black")
     mapa.draw_map()
 
+    if level is not None and int(level[6]) >= 6:
+        darkmode()
     screen.blit(fireboy.img, (fireboy.x, fireboy.y))
     screen.blit(watergirl.img, (watergirl.x, watergirl.y))
 
-    pause_menu = p.draw.rect(screen, "gray", (925, 0, 75, 75))
-    p.draw.rect(screen, "brown", (925, 0, 75, 75), 5)
+    pause_menu = draw_pause()
+    #ovládání postav klávesnicí
     pressed = p.key.get_pressed()
-    p.draw.line(screen, "black", (950, 15), (950, 60), 20)
-    p.draw.line(screen, "black", (975, 15), (975, 60), 20)
-
     up_down(pressed, fireboy)
     up_down(pressed, watergirl)
-        
+    left_right(pressed, fireboy)
+    left_right(pressed, watergirl)
+
+    #kontrola smrti postav
     brick_f = mapa.brick_on_pos((fireboy.x + fireboy.width//2, fireboy.y + fireboy.height))
     brick_w = mapa.brick_on_pos((watergirl.x + watergirl.width//2, watergirl.y + watergirl.height))
         
@@ -299,34 +319,32 @@ while True:
         if brick_f.type in ("poison", "water"):
             oof.play()
             menu = die(screen)
-
     if brick_w is not False:
         if brick_w.type in ("poison", "fire"):
             oof.play()
             menu = die(screen)
                 
-    
+    #kontrola vítězství
     if (f_portal[0]-12 < (fireboy.x+fireboy.width//2) < f_portal[0]+12 and f_portal[1]-12 < (fireboy.y+fireboy.height//2) < f_portal[1]+12) and \
          (w_portal[0]-12 < (watergirl.x+watergirl.width//2) < w_portal[0]+12 and w_portal[1]-12 < (watergirl.y+watergirl.height//2) < w_portal[1]+12):
         menu = "win"
-        fireboy = Players(32, 45, f_spawn[0], f_spawn[1], 5, 14, 0, fireboy_img, False, False, "fireboy")
+        fireboy = Players(32, 45, f_spawn[0], f_spawn[1], 5, 14, 0, fireboy_img, False, False, "fireboy") 
         watergirl = Players(30, 45, w_spawn[0], w_spawn[1], 5, 14, 0, watergirl_img, False, False, "watergirl")
         
-    left_right(pressed, fireboy)
-    left_right(pressed, watergirl)
-        
+    #zařizuje aby hra běžela na 60 snímcích za sekundu 
     p.time.Clock().tick(60)
-        
+
+    #pohyb mezi menu
     for event in p.event.get():
         if event.type == p.MOUSEBUTTONDOWN and event.button == 1:
             pos = p.mouse.get_pos()
             click.play()
             if pause_menu.collidepoint(pos):
                 menu = "pause"                
-        if event.type == p.QUIT:
+        if event.type == p.QUIT: #unkončení hry
             p.quit()
             quit()
-        if event.type == p.KEYDOWN:
+        if event.type == p.KEYDOWN: 
             if event.key == p.K_ESCAPE:
                 menu = "levels"
                 print("entered the levels menu")
@@ -341,7 +359,7 @@ while True:
     elif menu == "level":
         menu = None
         mapa = Map(level)
-        for line in mapa.array:
+        for line in mapa.array: #definování nových proměnných
             for brick in line:
                 if brick.type == "f_spawn":
                     f_spawn = brick.real_pos()
