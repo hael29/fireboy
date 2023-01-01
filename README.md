@@ -1,6 +1,6 @@
 # Fireboy & Watergirl
 Dokumentace k naší hře:
-Na hraní naší hry je nutné mítí instalovaný Python a nějaký programovací software, pro příklad IDLE nebo VS Code. Jelikož naše hra využívá knihovnu Pygame, je nutné si jí instalovat. Ve VS Code je třeba do terminálu zadat příkaz 'pip install pygame'. V IDLE se pak tento příkaz musí zadat do příkazového řádku Windows.
+Na hraní naší hry je nutné míti instalovaný Python a nějaký programovací software, pro příklad IDLE nebo VS Code. Jelikož naše hra využívá knihovnu Pygame, je nutné si ji instalovat. Ve VS Code je třeba do terminálu zadat příkaz 'pip install pygame'. V IDLE se pak tento příkaz musí zadat do příkazového řádku Windows.
 Hra využívá spousty externích souborů, obrázků a zvuků, pro komfort tedy doporučujeme stáhnout si celou složku 'fireboy' a nic v ní neměnit. Hlavní soubor se jmenuje 'dark pokus.py'. Stačí spustit pouze ten, program si sám bere funkce ze souborů zbylých.
 Po spuštění se ocitnete na hlavním menu. Z něj jde pokračovat do menu s levely, v němž narazíte na 10 hratelných levelů různých obtížností. Můžete hrát kterýkoli level bez omezení, kolikrát je libo.
 V každém levelu budou vždy naši protagonisté - Fireboy a Watergirl, tedy Ohýnek a Voděnka. Jejich cílem je spolupracovat a z levelu utéct - učiní tak, když se oba dostanou ke kulatým dveřím na konci. Ale pozor - jeden bez druhého nemůže odejít a smrt byť jen jednoho znamená restart celého levelu. Ohýnek se ovládá pomocí kláves W, A, D. Voděnka se ovládá pomocí šipek nahoru, doleva, doprava.
