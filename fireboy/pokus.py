@@ -298,7 +298,7 @@ while True:
     screen.fill("black")
     mapa.draw_map()
 
-    if level is not None and int(level[6]) >= 6:
+    if level is not None and level in ("level_2.txt", "level_7.txt"):
         darkmode()
     screen.blit(fireboy.img, (fireboy.x, fireboy.y))
     screen.blit(watergirl.img, (watergirl.x, watergirl.y))
