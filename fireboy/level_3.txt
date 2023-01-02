@@ -1,34 +1,34 @@
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
 X                                      X          
-X                        WW WW         X          
-X                       W  W  W        X          
-X           FF FF       W     W        X          
-X          F  F  F       W   W         X          
-X          F     F        W W          X          
-X B         F   F          W         G X          
-X            F F                       X          
-XXXX          F                     XXXX          
-XXXXW  X                        X  FXXXX          
-XXXXWW                            FFXXXX          
-XXXXWWW                          FFXXXXX          
-XXXXXWWW  X                  X  FFXXXXXX          
-XXXXXXWWW                      FFXXXXXXX          
-XXXXXXXWWW                    FFXXXXXXXX          
-XXXXXXXXWWW  X            X  FFXXXXXXXXX          
-XXWWXWWXXWWW                FFXXFFXFFXXX          
-XXWWXWWXXXWWW              FFXXXFFXFFXXX          
-XXXXXXXXXXXWWW  X      X  FFXXXXXXXXXXXX          
-XXWXXXWXXXXXWWW          FFXXXXXFFFFFXXX          
-XXWWWWWXXXXXXWWW        FFXXXXXXFXXXFXXX          
-XXXXXXXXXXXXXXWWW      FFXXXXXXXXXXXXXXX          
-XXXXXXXXXXXXXXXWW f  w FFXXXXXXXXXXXXXXX          
-XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
-XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
-XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
-XXXXXXXXXXXXXXXWWXXXXXXFFXXXXXXXXXXXXXXX          
-XWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFX          
-XWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFX          
-XWWWWWWWWWWWWWWWWWXXXXFFFFFFFFFFFFFFFFFX          
+XRPPPPPPPPPPLX           XRPPPPPPPPPPPLX          
+XXXXXXXXXXXXX             XXXXXXXXXXXXXX          
+X                 XX                   X          
+X               XXXXXX                 X          
+XRPPPPLX      XXX    XX      XRPPPPPPPLX          
+XXXXXXX      XX       XX      XXXXXXXXXX          
+X            X         X               X          
+X           XX         XX              X          
+XRPPPPPLX   X          XX    XRPPPPPPPLX          
+XXXXXXXXXX             X    XXXXXXXXXXXX          
+X                     XX               X          
+X                     X                X          
+XRPPPPLX            XXX     XRPPPPPPPPLX          
+XXXXXXX             XX    XXXXXXXXXXXXXX          
+X                   XXX                X          
+X                     X                X          
+XRPPPPPPLX            XX    XRPPPPPPPPLX          
+XXXXXXXXX              X     XXXXXXXXXXX          
+X           X          XX              X          
+X           XX         XX              X          
+X            X         X    XRPPPPPPPPLX          
+X            XX f    wXX  XXXXXXXXXXXXXX          
+X             XXX    XX                X          
+X               XXXXXX                 X          
+X                 XX      XRPPPPPPPPPPLX          
+X                       XXXXXXXXXXXXXXXX          
+X                                      X          
+X  B                                G  X          
+X              XRFFFFLX                X          
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
                                                   
                                                   

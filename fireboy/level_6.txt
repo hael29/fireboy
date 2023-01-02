@@ -1,35 +1,35 @@
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
-                                                  
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
+X                                      X          
+X                 GB                   X          
+X                                      X          
+XXXXXXXXXXX   XXXXXXXXXXXXXXXXXXXXXX   X          
+X                   X                  X          
+X                   X                  X          
+X                   X                  X          
+XXXXX   XXXXXXXXX   XXXXXXXXXX   XXXXXXX          
+X               X       X              X          
+X               X       X              X          
+X               X       X              X          
+X   XXXXXXXXX   XXXXX   X  XXXXXXXXX   X          
+X           X       XPPPX  X           X          
+X           X       XPPPX  X           X          
+X           X       XXXXX  X           X          
+XXXXXXXXX   XXXXXX      X  X   XXXXXXXXX          
+X                X      XPPX           X          
+X                X      XPPX           X          
+X                X  X   XXXX           X          
+X   XXXXXXXXX   XX  X      XXXXXXXXXFFFX          
+X   X            XPPX              XFFFX          
+X   X            XPPX              XFFFX          
+X   X            XXXXXXXXXXXX   XXXX   X          
+XPPPX   XXXXXXX  X                 X   X          
+XPPPX   X        X                 X   X          
+XXXXXPPPX        X  XXXXXXXXXXXXX  X   X          
+X   XPPPX        X  X   X       X  X   X          
+X   XXXXXXXXXXXXXX  X   XXXXXXXXX  X   X          
+X   WWWWWWWWWWWWWWWWX   FFFFFFFFFFFXPPPX          
+X w WWWWWWWWWWWWWWWWX f FFFFFFFFFFFXPPPX          
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
                                                   
                                                   
                                                   
